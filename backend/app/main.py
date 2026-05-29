@@ -28,7 +28,11 @@ class QueryRequest(BaseModel):
 
 
 def get_cors_origins():
-    default_origins = ["http://localhost:3000", "http://127.0.0.1:3000"]
+    default_origins = [
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://datachatfrontend-3j05d400z-ayush-kottarys-projects.vercel.app",
+    ]
     configured_origins = os.getenv("CORS_ORIGINS") or os.getenv("FRONTEND_URL")
     if not configured_origins:
         return default_origins
