@@ -1,0 +1,20 @@
+
+> datachat-frontend@0.1.0 dev
+> next dev -p 3000
+
+(node:34468) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Data%20Sciece%20Mastery/Data%20analytics%20AI/datachat/frontend/next.config.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to D:\Data Sciece Mastery\Data analytics AI\datachat\frontend\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+
+ ✓ Starting...
+(node:33608) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///D:/Data%20Sciece%20Mastery/Data%20analytics%20AI/datachat/frontend/next.config.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to D:\Data Sciece Mastery\Data analytics AI\datachat\frontend\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ✓ Ready in 2.7s
+ ○ Compiling / ...
+ ✓ Compiled / in 4.1s (498 modules)
+ GET / 200 in 4672ms

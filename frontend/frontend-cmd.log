@@ -1,0 +1,20 @@
+
+> datachat-frontend@0.1.0 dev
+> next dev --hostname 127.0.0.1 --port 3000
+
+  ▲ Next.js 14.2.35
+  - Local:        http://127.0.0.1:3000
+  - Network:      http://127.0.0.1:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.5s
+ ○ Compiling / ...
+ ✓ Compiled / in 5.2s (498 modules)
+ GET / 200 in 5451ms
+ GET / 200 in 41ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1065ms (501 modules)
+ GET /_next/static/webpack/eb14e36bca5542be.webpack.hot-update.json 404 in 1275ms
+ GET / 200 in 74ms
+ GET / 200 in 301ms
+ GET / 200 in 150ms
