@@ -61,7 +61,7 @@ const suggestedQueries = [
   "Average marks by class",
 ];
 
-const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || "http://127.0.0.1:8000").replace(/\/$/, "");
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || "https://datachat-tc7h.onrender.com").replace(/\/$/, "");
 const BACKEND_UNAVAILABLE_MESSAGE = "DataChat backend is currently unavailable.";
 
 export default function Home() {
