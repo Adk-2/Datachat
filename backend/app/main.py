@@ -1,5 +1,4 @@
 import io
-import os
 from pathlib import Path
 
 import pandas as pd
@@ -18,6 +17,15 @@ load_dotenv(dotenv_path=Path(__file__).resolve().parents[1] / ".env")
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 # In-memory storage for latest dataset schema
 _current_schema = None
 _current_dataframe = None
@@ -25,30 +33,6 @@ _current_dataframe = None
 
 class QueryRequest(BaseModel):
     question: str
-
-
-def get_cors_origins():
-    default_origins = [
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "https://datachatfrontend-3j05d400z-ayush-kottarys-projects.vercel.app",
-    ]
-    configured_origins = os.getenv("CORS_ORIGINS") or os.getenv("FRONTEND_URL")
-    if not configured_origins:
-        return default_origins
-
-    origins = [origin.strip().rstrip("/") for origin in configured_origins.split(",") if origin.strip()]
-    return list(dict.fromkeys(default_origins + origins))
-
-
-# Enable CORS for local development and configured production frontend domains.
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=get_cors_origins(),
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 
 @app.get("/health")
