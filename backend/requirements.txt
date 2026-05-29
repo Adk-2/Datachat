@@ -6,3 +6,4 @@ openai==2.38.0
 python-dotenv==1.0.0
 python-multipart==0.0.6
 requests==2.34.2
+rapidfuzz==3.13.0
